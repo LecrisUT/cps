@@ -1,4 +1,5 @@
 {
+  "cps_version": "0.12",
   "name": "sample",
   "description": "Sample CPS",
   "license": "BSD",
@@ -16,7 +17,11 @@
   "components": {
     "sample-core": {
       "type": "interface",
-      "definitions": [ "SAMPLE" ],
+      "definitions": {
+        "c": {
+          "SAMPLE": ""
+        }
+      },
       "includes": [ "@prefix@/include" ]
     },
     "sample": {
@@ -44,7 +49,11 @@
     },
     "sample-static": {
       "type": "archive",
-      "definitions": [ "SAMPLE_STATIC" ],
+      "definitions": {
+        "c": {
+          "SAMPLE_STATIC": ""
+        }
+      },
       "requires": [ ":sample-core" ],
       "configurations": {
         "optimized": {
